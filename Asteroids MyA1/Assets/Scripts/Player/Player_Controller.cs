@@ -16,12 +16,13 @@ public class Player_Controller : MonoBehaviour
 
     void Update()
     {
-        RotatePlayer();
+        ShootBullet();
     }
 
     private void FixedUpdate()
     {
         MovePlayer();
+        RotatePlayer();
     }
 
     void MovePlayer()
@@ -34,6 +35,11 @@ public class Player_Controller : MonoBehaviour
         _rg2d.rotation += Input.GetAxis("Horizontal") * rotatePlayer;
     }
 
-
-
+    void ShootBullet()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Dispara");
+        }
+    }
 }

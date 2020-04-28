@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Asteroid\Asteroid.cs" />
+    <Compile Include="Assets\Scripts\Bullet\Bullet.cs" />
     <Compile Include="Assets\Scripts\Bullet\PhaserBullet.cs" />
     <Compile Include="Assets\Scripts\Bullet\PhotonTorpedoBullet.cs" />
     <Compile Include="Assets\Scripts\Interface\Damage\ITakeDamage.cs" />

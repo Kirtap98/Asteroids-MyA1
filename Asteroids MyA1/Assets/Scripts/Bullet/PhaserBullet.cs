@@ -2,25 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhaserBullet : MonoBehaviour
+public class PhaserBullet : Bullet
 {
-    public float damageBullet;
-    public float speedBullet;
-    Rigidbody2D _rb2D;
-
-    private void Start()
+    public override void Start()
     {
-        _rb2D = GetComponent<Rigidbody2D>();
+        base.Start();
     }
 
-    private void FixedUpdate()
+    public override void FixedUpdate()
     {
-        Move();
-    }
-
-    void Move()
-    {
-        _rb2D.velocity = transform.up * speedBullet;
+        base.FixedUpdate();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
