@@ -20,7 +20,9 @@ public class PhaserBullet : Bullet
 
         if(_col != null)
         {
+            _return = true;
             _col.TakeDamage(damageBullet);
+            PoolBullet.Instance.Retur(gameObject);
         }
     }
 }

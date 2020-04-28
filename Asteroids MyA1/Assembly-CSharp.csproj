@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Interface\Observer\IObservable.cs" />
     <Compile Include="Assets\Scripts\Interface\Observer\IObserver.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Controller.cs" />
+    <Compile Include="Assets\Scripts\Pool\PoolBullet.cs" />
     <None Include="Assets\Sprites\license.txt" />
     <None Include="Assets\Sprites\Spritesheet\sheet.xml" />
     <Reference Include="Unity.Timeline.Editor">

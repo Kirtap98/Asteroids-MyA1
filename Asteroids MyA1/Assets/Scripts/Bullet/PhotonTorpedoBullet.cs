@@ -6,6 +6,8 @@ public class PhotonTorpedoBullet : Bullet
 {
     public float explotionArea;
 
+    float _force;
+
     public override void Start()
     {
         base.Start();
@@ -18,7 +20,18 @@ public class PhotonTorpedoBullet : Bullet
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        RangeExplotion();
+        var _col = gameObject.GetComponent<ITakeDamage>();
+
+        if (_col != null)
+        {
+            _return = true;
+
+            RangeExplotion();
+
+            _col.TakeDamage(_force);
+
+            PoolBullet.Instance.Retur(gameObject);
+        }
     }
 
     void RangeExplotion()
@@ -29,14 +42,7 @@ public class PhotonTorpedoBullet : Bullet
         {
             if (_objets.gameObject == gameObject) continue;
 
-            var force = damageBullet * ((_objets.transform.position - transform.position).magnitude / explotionArea);
-
-            var _col = gameObject.GetComponent<ITakeDamage>();
-
-            if (_col != null)
-            {
-                _col.TakeDamage(force);
-            }
+            _force = damageBullet * ((_objets.transform.position - transform.position).magnitude / explotionArea);
         }
     }
 }

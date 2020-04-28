@@ -7,6 +7,8 @@ public class Player_Controller : MonoBehaviour
     public float speedPlayer;
     public float rotatePlayer;
 
+    public Transform point;
+
     Rigidbody2D _rg2d;
 
     void Start()
@@ -32,14 +34,14 @@ public class Player_Controller : MonoBehaviour
 
     void RotatePlayer()
     {
-        _rg2d.rotation += Input.GetAxis("Horizontal") * rotatePlayer;
+        _rg2d.rotation += -Input.GetAxis("Horizontal") * rotatePlayer;
     }
 
     void ShootBullet()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Dispara");
+            PoolBullet.Instance.Get().transform.position = point.position ;
         }
     }
 }
