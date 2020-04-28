@@ -32,7 +32,7 @@ public class Player_Controller : MonoBehaviour
 
     void RotatePlayer()
     {
-        _rg2d.rotation += Input.GetAxis("Horizontal") * rotatePlayer;
+        _rg2d.rotation += -Input.GetAxis("Horizontal") * rotatePlayer;
     }
 
     void ShootBullet()
