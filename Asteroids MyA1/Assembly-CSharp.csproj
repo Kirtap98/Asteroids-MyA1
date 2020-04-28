@@ -63,6 +63,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bullet\PhaserBullet.cs" />
+    <Compile Include="Assets\Scripts\Bullet\PhotonTorpedoBullet.cs" />
+    <Compile Include="Assets\Scripts\Interface\Damage\ITakeDamage.cs" />
+    <Compile Include="Assets\Scripts\Interface\Observer\IObservable.cs" />
+    <Compile Include="Assets\Scripts\Interface\Observer\IObserver.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Controller.cs" />
     <None Include="Assets\Sprites\license.txt" />
     <None Include="Assets\Sprites\Spritesheet\sheet.xml" />

@@ -33,4 +33,7 @@ public class Player_Controller : MonoBehaviour
     {
         _rg2d.rotation += Input.GetAxis("Horizontal") * rotatePlayer;
     }
+
+
+
 }
