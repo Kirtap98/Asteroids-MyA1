@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour,ITakeDamage
+public class Asteroid : MonoBehaviour
 {
     Rigidbody2D _rb2D;
 

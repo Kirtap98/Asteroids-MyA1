@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
     public virtual void Update()
     {
         Debug.Log(_return);
+
         if(_return)
         {
             StopCoroutine(Reset());
