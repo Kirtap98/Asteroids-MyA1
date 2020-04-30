@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     public float damageBullet;
     public float speedBullet;
     public float timeLife;
-    protected bool _return = false;
+    public bool _return = false;
     Rigidbody2D _rb2D;
 
     public virtual void Start()
@@ -20,9 +20,10 @@ public class Bullet : MonoBehaviour
     {
         Debug.Log(_return);
 
-        if(_return)
+        if(_return==true)
         {
             StopCoroutine(Reset());
+            _return = false;
         }
     }
 
@@ -33,12 +34,14 @@ public class Bullet : MonoBehaviour
 
     void Move()
     {
-        _rb2D.velocity = transform.up * speedBullet;
+        transform.position+=transform.up*speedBullet*Time.deltaTime;
     }
 
     IEnumerator Reset()
     {
         yield return new WaitForSeconds(timeLife);
         PoolBullet.Instance.Retur(gameObject);
+        _return = true;
+
     }
 }

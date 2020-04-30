@@ -51,5 +51,6 @@ public class PoolBullet : MonoBehaviour
     {
         _bullet.SetActive(false);
         _bullets.Add(_bullet);
+        transform.position = Vector2.zero;
     }
 }

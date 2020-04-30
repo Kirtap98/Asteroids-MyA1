@@ -11,26 +11,25 @@ public class Player_ScreenWrapper : MonoBehaviour
 
 
 
+
+   
     private void FixedUpdate()
     {
         ScreenWrapper();
     }
     private void ScreenWrapper()
     {
-        Vector2 playerpos = this.transform.position;
-        if (this.transform.position.y > screenHeight)
+        Vector2 playerpos = transform.position;
+        if (transform.position.y > screenHeight)
             playerpos.y = -screenHeight;
-        if (this.transform.position.y < -screenHeight)
+        if (transform.position.y < -screenHeight)
             playerpos.y = screenHeight;
-        if (this.transform.position.x > screenWidth)
+        if (transform.position.x > screenWidth)
             playerpos.x = -screenWidth;
-        if (this.transform.position.x < -screenWidth)
+        if (transform.position.x < -screenWidth)
             playerpos.x = screenWidth;
         transform.position = playerpos;
     }
-    private void Update()
-    {
-
-    }
+   
 
 }

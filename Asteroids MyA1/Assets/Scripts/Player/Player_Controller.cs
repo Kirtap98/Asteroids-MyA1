@@ -7,7 +7,7 @@ public class Player_Controller : MonoBehaviour
     public float speedPlayer;
     public float rotatePlayer;
 
-    public Transform point;
+    
 
     Rigidbody2D _rg2d;
 
@@ -18,7 +18,7 @@ public class Player_Controller : MonoBehaviour
 
     void Update()
     {
-        ShootBullet();
+        //ShootBullet();
     }
 
     private void FixedUpdate()
@@ -37,11 +37,11 @@ public class Player_Controller : MonoBehaviour
         _rg2d.rotation += -Input.GetAxis("Horizontal") * rotatePlayer;
     }
 
-    void ShootBullet()
+    /*void ShootBullet()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            PoolBullet.Instance.Get().transform.position = point.position ;
+            PoolBullet.Instance.Get().transform.up=point.localPosition ;
         }
-    }
+    }*/
 }
